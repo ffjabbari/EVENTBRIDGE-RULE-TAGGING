@@ -41,6 +41,15 @@ NOW FRED you can to cdk1 deploy --verbose
 REMEMBER you can use CDK1 or CDK or CDK2 because you got alias setup in your ~/.zshrc         That is the only reason fred...
   416  pwd
 
+  419  git remote set-url origin git@github.com:ffjabbari/https-github.com-willdady-cdk-eventbridge-no-match-rule.git
+  420  git status
+  421  git add .
+  422  git status
+  423  git push -u origin master
+  424  git commit -ma"change for this work..."
+  425  git push -u origin master
+  426  git push origin head
+
 
 - `npm run build` compile typescript to js
 - `npm run watch` watch for changes and compile
