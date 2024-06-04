@@ -16,7 +16,7 @@ export class NoMatchRule extends cdk.Construct {
     super(scope, id);
 
     const func = new lambdaNodejs.NodejsFunction(this, 'func', {
-      runtime: lambda.Runtime.NODEJS_14_X,
+      runtime: lambda.Runtime.NODEJS_16_X,
       memorySize: 256,
       environment: {
         EVENT_BUS_ARN: props.eventBus.eventBusArn,

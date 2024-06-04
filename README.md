@@ -1,14 +1,46 @@
-# EventBridge No Match Rule
 
-AWS EventBridge does not natively provide a way to catch events which do not match any rules defined on an event bus. This AWS CDK project defines a custom construct, `NoMatchRule`, which captures unmatched events and forwards them to an SQS queue of your choosing.
+FRED J's Complex EventBridge
 
-This works by creating a rule which matches on **all** events and forwards the event to a Lambda function. The Lambda function fetches all rules from the event bus and tests the event against each rule's pattern. If no rules match the event is then sent to the SQS queue.
+- `npm install @aws-cdk/core` install all needed packages per your import as follows
+**** FRED NEVER EVER EVER INSTALL ANY CDK PACKAGE GLOBALLY ****
+388* npm install @aws-cdk/aws-events
+  389* npm install @aws-cdk/aws-events-targets
+  390* npm install @aws-cdk/aws-lambda
+  391* npm install @aws-cdk/aws-iam
+  392* npm install @aws-cdk/aws-sqs
+  393* cdk2 bootstrap aws://636090713215/us-east-1
+  npm install -g typescript   --- IS OKAY TO INSTALL TYPESCRIPT GOLBALLY BUT NEVER ANY CDK..
+  SEE FRED CDK Package has many versions and you must manually per project do this command to install them 
+  npm install @aws-cdk/core@1.x       OR
+  npm install W@aws-cdk/core@2.x       
+  OR ANY OTHER ONE YOU NEED.  ALWAYS INSTALL MANUALLY PER PROJECT
+  394* npm run build
+  396  npm run build
+  397  cdk2 synth
+  398  cdk2 deploy --verbose
+  399  cdk2 bootstrap aws://636090713215/us-east-1
+  400  cdk2 synth
+  401  cdk2 deploy --verbose
+  402  cdk bootstrap aws://636090713215/us-east-1
+ 
+  405  \tnpm run build
+  406  aws configure
+  407  npm run build
+  408  cdk2 bootstrap aws://636090713215/us-east-1
 
-Note you must instantiate `NoMatchRule` at most **once** for a given event bus.
+  410  cdk --version
+  411  cdk bootstrap aws://636090713215/us-east-1
+  412  npm run build
+  413  cdk bootstrap aws://636090713215/us-east-1
+  414  cdk synth
+  415  cdk deploy
+cdk destroy
 
-![Architecture diagram](./diagram.png)
+NOW FRED you can to cdk1 deploy --verbose
 
-## Commands
+REMEMBER you can use CDK1 or CDK or CDK2 because you got alias setup in your ~/.zshrc         That is the only reason fred...
+  416  pwd
+
 
 - `npm run build` compile typescript to js
 - `npm run watch` watch for changes and compile
